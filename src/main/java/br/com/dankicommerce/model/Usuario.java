@@ -1,18 +1,24 @@
 package br.com.dankicommerce.model;
 
-public class Usuario {
-	private Integer id;
+import javax.persistence.Entity;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import br.com.olimposistema.aipa.model.Model;
+
+@Entity
+public class Usuario extends Model {
+	
+	@NotEmpty @Size(min = 3, max = 100, message = "{usuario.nome.size}") // Condição da coluna do banco.
 	private String nome;
+	
+	@NotEmpty @Email  // Condicao para email
 	private String email;
+	
+	@NotEmpty 
 	private String senha;
-	
-	public Integer getId() {
-		return id; 
-	}
-	
-	public void setId(Integer id) {
-		this.id = id;
-	}
 	
 	public String getNome() {
 		return nome;

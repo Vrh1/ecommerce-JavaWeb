@@ -52,6 +52,15 @@ pageEncoding="UTF-8"%>
                     <h2 class="section-heading text-uppercase">Cadastre-se</h2>
                     <h3 class="section-subheading text-muted">Crie seu Cadastro Gratuitamente</h3>
                 </div>
+                
+                <c:if test="${not empty errors}">
+                <div class="alert alert-danger" role="alert">
+                	<c:forEach var ="error" items="${errors }">
+                	${error.message}<br />
+                	</c:forEach>
+                </div>
+                </c:if>
+                
                 <form method="post" action="<c:url value="cadastrar/salvaUsuario"/>"> <!-- Method post -->
                     <div class="row justify-content-md-center mb-5 text-center">
                         <div class="col-md-12 align-self-center text-center">
