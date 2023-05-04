@@ -17,7 +17,7 @@ public class Usuario extends Model {
 	@NotEmpty @Email  // Condicao para email
 	private String email;
 	
-	@NotEmpty 
+	@NotEmpty @Size(min = 3, max = 100, message = "usuario.senha.size")
 	private String senha;
 	
 	public String getNome() {
