@@ -17,3 +17,5 @@ Padrão DAO.
 Aula 4 - Mantendo campos já preenchidos em caso de refresh da página (campo Nome e Email).
 
 Aula 5 - Confirmação de email.
+
+Aula 6 - Implementando a tela de login,
